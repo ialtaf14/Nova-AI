@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>✨ Nova AI</h1>
+            <div class="header-controls">
+                <button id="cloud-btn" title="Toggle Kimi AI (Cloud)">K</button>
+                <select id="model-select" title="Choose AI Brain">
+                    <option value="llama">Llama 3.1 (Smart)</option>
+                    <option value="qwen">Qwen 3 (New)</option>
+                    <option value="mistral">Mistral 7B</option>
+                    <option value="phi">Phi-3 (Fast)</option>
+                    <option value="coder">DeepSeek (Code)</option>
+                </select>
+                <span class="status-dot"></span>
+            </div>
+        </header>
+
+        <div id="chat-box" class="chat-box">
+            <div class="message nova-message">
+                <div class="avatar">🤖</div>
+                <div class="content">Hello! I'm Nova. How can I help you today?</div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <button id="mute-btn" class="icon-btn" title="Toggle Voice">
+                🔊
+            </button>
+            <button id="mic-btn" class="mic-btn">
+                <span class="mic-icon">🎤</span>
+            </button>
+            <input type="text" id="text-input" placeholder="Type a command..." autocomplete="off">
+            <button id="stop-btn" class="send-btn" style="display: none; color: #ff3b30;"
+                title="Stop Generation">⏹</button>
+            <button id="send-btn" class="send-btn">➤</button>
+        </div>
+        <div class="disclaimer-text">
+            Nova can make mistakes, so double-check it
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
