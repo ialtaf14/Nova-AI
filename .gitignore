@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+.env
+*.log
+download_status.txt
+uploads/
