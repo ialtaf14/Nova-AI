@@ -33,7 +33,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 app = Flask(__name__)
 
 # OpenRouter / Kimi AI Configuration (Added)
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "enter your api Key"
 OPENROUTER_MODEL = "moonshotai/kimi-k2"
 
 # Initialize Client
