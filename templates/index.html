@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="chat-container">
+        <header>
+            <div class="header-title-box">
+                <h1>✨ Nova AI</h1>
+                <a href="https://ialtaf14.vercel.app/" target="_blank" class="portfolio-badge" title="View Altaf Khan's Portfolio">By Altaf Khan ↗</a>
+            </div>
+            <div class="header-controls">
+                <button id="google-btn" title="Toggle Google Live Search (No API Key Required)">🌐</button>
+                <select id="model-select" title="Choose AI Brain">
+                    <option value="llama">Llama 3.1 (Smart)</option>
+                    <option value="qwen">Qwen 3 (New)</option>
+                    <option value="mistral">Mistral 7B</option>
+                    <option value="phi">Phi-3 (Fast)</option>
+                    <option value="coder">DeepSeek (Code)</option>
+                </select>
+                <button id="clear-btn" class="icon-btn-header" title="Clear Chat History">🗑️</button>
+                <span class="status-dot"></span>
+            </div>
+        </header>
+
+        <div id="chat-box" class="chat-box">
+            <div class="message nova-message">
+                <div class="avatar">🤖</div>
+                <div class="content">
+                    Hello! Main Nova hoon — created by <a href="https://ialtaf14.vercel.app/" target="_blank" style="color: #60a5fa; font-weight: 600; text-decoration: underline;">Altaf Khan</a>. Kaise help karoon aapki aaj?
+                    <div class="suggestion-chips">
+                        <button class="chip" onclick="sendQuickPrompt('Who created you?')">👨‍💻 Creator Info</button>
+                        <button class="chip" onclick="sendQuickPrompt('Tell me about Altaf Khan portfolio and skills')">🚀 Altaf's Portfolio</button>
+                        <button class="chip" onclick="sendQuickPrompt('Help me write Python code')">🐍 Python Helper</button>
+                        <button class="chip" onclick="sendQuickPrompt('What is Machine Learning?')">🧠 Machine Learning</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Attachment Staging Preview Container -->
+        <div id="image-preview-container" class="image-preview-container" style="display: none;">
+            <div class="preview-box">
+                <img id="image-preview-thumb" src="" alt="Selected Image Preview">
+                <div class="preview-info">
+                    <span id="image-preview-name">image.png</span>
+                    <small>Attached (Press ➤ to send with prompt)</small>
+                </div>
+                <button id="remove-image-btn" class="remove-img-btn" title="Remove Image">✕</button>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <button id="mute-btn" class="icon-btn" title="Toggle Voice">
+                🔊
+            </button>
+            <button id="mic-btn" class="mic-btn">
+                <span class="mic-icon">🎤</span>
+            </button>
+            <button id="image-btn" class="icon-btn" title="Upload an image (Vision)">
+                🖼️
+            </button>
+            <input type="file" id="image-input" accept="image/png, image/jpeg, image/gif, image/webp"
+                style="display: none;">
+            <input type="text" id="text-input" placeholder="Type a command..." autocomplete="off">
+            <button id="stop-btn" class="send-btn" style="display: none; color: #ff3b30;"
+                title="Stop Generation">⏹</button>
+            <button id="send-btn" class="send-btn">➤</button>
+        </div>
+        <div class="disclaimer-text">
+            Created by <a href="https://ialtaf14.vercel.app/" target="_blank" style="color: rgba(255,255,255,0.7); text-decoration: underline;">Altaf Khan</a> • Nova can make mistakes, so double-check it
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

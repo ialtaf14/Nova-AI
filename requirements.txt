@@ -1,0 +1,13 @@
+requests
+python-dotenv
+SpeechRecognition
+pyttsx3
+pyaudio
+google-generativeai
+ollama
+wikipedia
+pywhatkit
+ddgs
+flask
+werkzeug
+rich

@@ -1,0 +1,24 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+
+# Python byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables & editor settings
+.env
+.vscode/
+.idea/
+
+# Application runtime files & logs
+uploads/*
+!uploads/.gitkeep
+download_status.txt
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
