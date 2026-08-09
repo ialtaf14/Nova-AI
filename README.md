@@ -56,6 +56,4 @@ Nova AI is an advanced hybrid AI assistant created by **Altaf Khan**. It combine
 **Altaf Khan**  
 *Data Analyst & Data Scientist*  
 🌐 **Portfolio**: [https://ialtaf14.vercel.app/](https://ialtaf14.vercel.app/)  
-📂 **GitHub**: [@ialtaf14](https://github.com/ialtaf14)  
-💼 **LinkedIn**: [Altaf Khan](https://www.linkedin.com/in/altaf-khan-7a544b256/)  
-📄 **CV/Resume**: [Altaf Khan CV](https://ialtaf14.vercel.app/cv/Altaf_Khan_CV.pdf)
+💼 **LinkedIn**: [Altaf Khan](https://www.linkedin.com/in/ialtaf14/)
